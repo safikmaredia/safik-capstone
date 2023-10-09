@@ -1,36 +1,36 @@
+import { Outlet } from 'react-router-dom';
 import Main from '../../components/main/main';
-
-import clothes from '../../assets/2020-carters-thekit.webp';
-import toys from '../../assets/61bGKsZeLlL.jpeg';
-import access from '../../assets/1624707929.jpeg';
-import food from '../../assets/ALDIs-Mamia-100-Organic-Baby-Food-Pouches-Review-A-Mum-Reviews.jpeg';
 
 const Home = () => {
   const categories = [
     {
       id: 1,
       title: 'Clothes',
-      imageUrl: clothes,
+      imageUrl: '',
     },
     {
       id: 2,
       title: 'Toys',
-      imageUrl: toys,
+      imageUrl: '',
     },
     {
       id: 3,
       title: 'Accessories',
-      imageUrl: access,
+      imageUrl: '',
     },
     {
-        id: 4,
-        title: 'Food',
-        imageUrl: food,
-      },
-
+      id: 4,
+      title: 'Food',
+      imageUrl: '',
+    },
   ];
 
-  return <Main categories={categories} />;
+  return (
+    <div>
+      <Main categories={categories} />
+      <Outlet />
+    </div>
+  );
 };
 
 export default Home;
