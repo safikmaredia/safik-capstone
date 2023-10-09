@@ -1,14 +1,14 @@
 // Navigation.jsx
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
-import CrwnLogoImage from '../../assets/baby.jpeg';
+import babylogo from '../../assets/baby.jpeg';
 import './navigation.scss';
 
 const Navigation = () => {
   return (
     <div className='navigation'>
       <Link className='logo-container' to='/'>
-        <img src={CrwnLogoImage} alt="Logo" className='logo' />
+        <img src={babylogo} alt="Logo" className='logo' />
       </Link>
       <div className='nav-links-container'>
         <Link className='nav-link' to='/shop'>
