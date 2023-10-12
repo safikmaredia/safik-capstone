@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 
+import React, { useState } from 'react';
 import FormInput from '../form/form';
 import Button from '../button-component/button-component';
 
@@ -10,44 +10,42 @@ import {
 
 import './signup.scss';
 
+const defaultFormFields = {
+  displayName: '',
+  email: '',
+  password: '',
+  confirmPassword: '',
+};
+
 const SignUpForm = () => {
-  const [formFields, setFormFields] = useState({
-    displayName: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-  });
+  const [formFields, setFormFields] = useState(defaultFormFields);
+  const { displayName, email, password, confirmPassword } = formFields;
 
   const resetFormFields = () => {
-    setFormFields({
-      displayName: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
-    });
+    setFormFields(defaultFormFields);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (formFields.password !== formFields.confirmPassword) {
+    if (password !== confirmPassword) {
       alert('Passwords do not match');
       return;
     }
 
     try {
       const { user } = await createAuthUserWithEmailAndPassword(
-        formFields.email,
-        formFields.password
+        email,
+        password
       );
 
-      await createUserDocumentFromAuth(user, { displayName: formFields.displayName });
+      await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
     } catch (error) {
       if (error.code === 'auth/email-already-in-use') {
         alert('Cannot create user, email already in use');
       } else {
-        console.log('User creation encountered an error', error);
+        console.error('User creation encountered an error', error);
       }
     }
   };
@@ -61,33 +59,33 @@ const SignUpForm = () => {
   return (
     <div className='sign-up-container'>
       <h2>Don't have an account?</h2>
-      <span>Sign Up</span>
+      <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput
-          label='Your Name'
+          label='Display Name'
           type='text'
           required
           onChange={handleChange}
           name='displayName'
-          value={formFields.displayName}
+          value={displayName}
         />
 
         <FormInput
-          label='Your Email'
+          label='Email'
           type='email'
           required
           onChange={handleChange}
           name='email'
-          value={formFields.email}
+          value={email}
         />
 
         <FormInput
-          label='Choose a Password'
+          label='Password'
           type='password'
           required
           onChange={handleChange}
           name='password'
-          value={formFields.password}
+          value={password}
         />
 
         <FormInput
@@ -96,10 +94,9 @@ const SignUpForm = () => {
           required
           onChange={handleChange}
           name='confirmPassword'
-          value={formFields.confirmPassword}
+          value={confirmPassword}
         />
-
-        <Button type='submit'>Create Account</Button>
+        <Button type='submit'>Sign Up</Button>
       </form>
     </div>
   );

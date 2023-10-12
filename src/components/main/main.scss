@@ -1,19 +1,9 @@
 
   
 
+@use '../../styles/partials/mixins' as *;
 
 
-@mixin tablet {
-  @media (min-width: 768px) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: 1280px) {
-    @content;
-  }
-}
 
 .main-container {
   width: 100%;
@@ -29,3 +19,9 @@
    
   }
 }
+
+
+
+
+
+
