@@ -1,4 +1,3 @@
-/* navigation.scss */
 
 .navigation {
     height: 70px;
@@ -9,12 +8,12 @@
   
     .logo-container {
       height: 100%;
-      padding: 10px; /* Reduce padding to make the container smaller */
+      padding: 10px; 
     }
   
     .logo {
-      height: 100%; /* Set the height of the image to 100% of its container */
-      width: auto;  /* Let the width adjust proportionally based on the height */
+      height: 100%; 
+      width: auto;  
     }
   
     .nav-links-container {

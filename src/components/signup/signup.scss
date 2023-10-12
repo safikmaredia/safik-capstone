@@ -1,0 +1,32 @@
+body {
+    background-color: whitesmoke;
+}
+.sign-up-container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 400px;
+    padding: 20px;
+    border: 2px solid #2ecc71; 
+    border-radius: 10px;
+    background-color: #ecf0f1; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+    h2 {
+      color: #e74c3c; 
+    }
+  
+    span {
+      color: #2c3e50; 
+    }
+  
+    form {
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+  
+    button {
+      width: 100%;
+      background-color: #f39c12; 
+    }
+}
+
