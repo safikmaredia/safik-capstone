@@ -1,0 +1,92 @@
+// .checkout-container {
+//     width: 55%;
+//     min-height: 90vh;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     margin: 50px auto 0;
+  
+//     .checkout-header {
+//       width: 100%;
+//       padding: 10px 0;
+//       display: flex;
+//       justify-content: space-between;
+//       border-bottom: 1px solid darkgrey;
+  
+//       .header-block {
+//         text-transform: capitalize;
+//         width: 23%;
+  
+//         &:last-child {
+//           width: 8%;
+//         }
+//       }
+//     }
+  
+//     .total {
+//       margin-top: 30px;
+//       margin-left: auto;
+//       font-size: 36px;
+//     }
+//   }
+
+
+
+
+// checkout.scss
+
+
+@import '../../styles/partials/mixins';
+
+
+.checkout-container {
+    width: 100%;
+    max-width: 400px;  // Adjust the max-width as needed
+    margin: 20px auto;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    .checkout-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+      font-weight: bold;
+      margin-left: 5px;
+  
+      .header-block {
+        width: 20%;
+        text-align: center;
+      }
+    }
+  
+    .total {
+      margin-top: 20px;
+      text-align: right;
+      font-size: 1.2em;
+    }
+  
+    @include tablet {
+      max-width: 800px;  // Adjust the max-width for tablets
+  
+      .checkout-header {
+        .header-block {
+          width: 20%;
+        }
+      }
+    }
+  
+    @include desktop {
+      max-width: 1200px;  // Adjust the max-width for desktops
+  
+      .checkout-header {
+        .header-block {
+          width: 20%;
+        }
+      }
+    }
+  }
+  
