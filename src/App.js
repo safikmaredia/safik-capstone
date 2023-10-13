@@ -1,27 +1,29 @@
-import { useContext } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-
-import { UserContext } from "./contexts/user.context";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "./routes/home/home";
 import Navigation from "./routes/navigation/navigation";
 import Authenticate from "./routes/authenticate/authenticate";
+import Shopping from "./routes/shopping/shopping"
+
+
 
 const App = () => {
-  const { currentUser } = useContext(UserContext);
   return (
-    <Routes>
-      <Route path="/" element={<Navigation />}>
-        <Route index element={<Home />} />
-        <Route
-          path="authenticate"
-          element={
-            currentUser ? <Navigate to="/" replace /> : <Authenticate />
-          }
-        />
-      </Route>
-    </Routes>
+  <Routes>
+  <Route path="/" element={<Navigation />}>
+    <Route index element={<Home />} />
+    <Route path="authenticate" element={<Authenticate />} />
+    <Route path="shopping" element={<Shopping />} />
+  </Route>
+</Routes>
+
   );
 };
 
 export default App;
+
+
+
+
+
+
