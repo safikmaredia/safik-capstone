@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';  // Add a comma after React
+import React, { useContext } from 'react';  
 
 import ProductCard from '../../components/item-card/item-card';
 
@@ -6,7 +6,7 @@ import { ProductsContext } from '../../contexts/products.context';
 
 import './shopping.scss';
 
-const Shopping = () => {  // Capitalize the component name
+const Shopping = () => {  
   const { products } = useContext(ProductsContext);
 
   return (
@@ -18,4 +18,4 @@ const Shopping = () => {  // Capitalize the component name
   );
 };
 
-export default Shopping;  // Capitalize the export name
+export default Shopping;  
