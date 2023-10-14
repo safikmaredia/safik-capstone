@@ -1,12 +1,25 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+.header {
+  text-align: center;
+  color: black;
+  background-color: #f2eeed;
+  height: 35px;
+  width: 100%;
+  font-weight: bolder;
+  line-height: 35px;
+  
+}
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: linear-gradient(to right, white, #ff6666); 
-  color: #ffffff; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  color: black; 
+  border-bottom: 1px solid rgb(201, 201, 201);
 }
 
 .logo-container {
@@ -19,6 +32,7 @@
   width: 45px; 
   height: auto;
   margin-right: 10px;
+
 }
 
 .nav-links-container {
@@ -26,17 +40,22 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
+  margin-right: 30px;
+  
 }
 
 .nav-link {
   text-decoration: none;
-  color: #ffffff; 
+  color: black; 
   font-weight: bold;
   transition: color 0.3s ease-in-out;
+  margin-right: 20px;
+  font-size: 17px;
+  padding-bottom: 5px;
 }
 
 .nav-link:hover {
-  color: #ffd700; 
+  border-bottom: 2px solid black ; 
 }
 
 

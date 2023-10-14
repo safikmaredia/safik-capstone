@@ -18,9 +18,12 @@ const Navigation = () => {
 
   return (
     <Fragment>
+      <div className='header'>
+        <p>Free Shipping on orders above $100</p>
+      </div>
       <div className='navigation'>
         <Link className='logo-container' to='/'>
-          <img src={babylogo} alt='Baby Logo' className='logo' />
+        <img src={babylogo} alt='Baby Logo' className='logo' />
         </Link>
         <div className='nav-links-container'>
           <Link className='nav-link' to='/shopping'>

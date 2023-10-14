@@ -1,6 +1,17 @@
+@import '../../styles/partials/mixins';
+
 .validation-container {
-    display: flex;
-    width: 900px;
-    justify-content: space-between;
-    margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px auto;
+  width: 100%; 
+
+  @media (min-width: 768px) {
+    width: 80%; 
   }
+
+  @media (min-width: 1280px) {
+    width: 900px; 
+  }
+}

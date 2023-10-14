@@ -1,27 +1,17 @@
 
-  
-
-@use '../../styles/partials/mixins' as *;
-
+@import '../../styles/partials/mixins';
 
 
 .main-container {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
   @include tablet {
-    justify-content: center;
+    margin: 0 -10px; 
   }
 
   @include desktop {
-   
+    margin: 0 -20px; 
   }
 }
-
-
-
-
-
-

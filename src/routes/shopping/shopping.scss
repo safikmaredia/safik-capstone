@@ -1,24 +1,12 @@
 
-@import '../../styles/partials/mixins';
-
-
-
 .products-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
 
-
-  .product-card-container {
-    margin: 10px;
-    width: 90%; 
-
-    @include tablet {
-      width: 30%; 
-    }
-
-    @include desktop {
-      width: 20%; 
-    }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr); 
   }
 }
