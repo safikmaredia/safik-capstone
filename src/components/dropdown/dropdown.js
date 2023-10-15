@@ -18,15 +18,20 @@ const CartDropdown = () => {
   };
 
   return (
-    <div className='cart-dropdown-container'>
-      <div className='cart-items'>
+    <div className='custom-cart-dropdown'>
+      <div className='custom-cart-header'>
+        <h3>Your Cart</h3>
+      </div>
+      <div className='custom-cart-items'>
         {cartItems.length ? (
           cartItems.map((item) => <CartItem key={item.id} cartItem={item} />)
         ) : (
           <span className='empty-message'>Cart is empty</span>
         )}
       </div>
-      <Button onClick={goToCheckoutHandler}>CHECKOUT</Button>
+      <div className='custom-cart-footer'>
+        <Button onClick={goToCheckoutHandler}>CHECKOUT</Button>
+      </div>
     </div>
   );
 };

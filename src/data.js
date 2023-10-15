@@ -1,19 +1,19 @@
-const PRODUCTS = [
+const PRODUCT = [
     {
       id: 1,
-      name: 'Sensory toy',
+      name: 'Jumper',
       imageUrl: 'https://theme738-infant-clothes-store.myshopify.com/cdn/shop/products/jordan_baby_clothes_3_piece_set_teal_jordan_23_size_0_6_months_1_470x509_crop_top.png?v=1562154551',
       price: 25,
     },
     {
       id: 2,
-      name: 'Baby walker',
+      name: 'Jumper',
       imageUrl: 'https://theme738-infant-clothes-store.myshopify.com/cdn/shop/products/jordan_baby_clothes_3_piece_set_teal_jordan_23_size_0_6_months_1_470x509_crop_top.png?v=1562154551',
       price: 20,
     },
     {
       id: 3,
-      name: 'Baby walker',
+      name: 'Jumper',
       imageUrl: 'https://theme738-infant-clothes-store.myshopify.com/cdn/shop/products/jordan_baby_clothes_3_piece_set_teal_jordan_23_size_0_6_months_1_470x509_crop_top.png?v=1562154551',
       price: 32,
     },
@@ -50,5 +50,5 @@ const PRODUCTS = [
 
   ];
   
-  export default PRODUCTS;
+  export default PRODUCT;
   

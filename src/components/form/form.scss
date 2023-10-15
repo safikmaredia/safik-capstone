@@ -4,18 +4,17 @@
   margin: 25px 0;
 
   input {
-    background: none;
+    // background: none;
     background-color: #ecf0f1; 
     color: #2c3e50; 
     font-size: 18px;
     padding: 10px 10px 10px 5px;
-    display: block;
     width: 100%;
     border: none;
     border-radius: 5px;
     border-bottom: 2px solid #8bb1ca; 
     margin: 5px 0;
-    transition: background 0.3s, border 0.3s, color 0.3s;
+    // transition: background 0.3s, border 0.3s, color 0.3s;
 
     &:focus {
       outline: none;
@@ -26,20 +25,15 @@
   }
 
   label {
-    color: #000000; /* Grey label text */
+    color: #000000; 
     font-size: 16px;
     font-weight: normal;
     position: absolute;
     pointer-events: none;
     left: 5px;
     top: 10px;
-    transition: 300ms ease all;
 
-    &.shrink {
-      top: -14px;
-      font-size: 12px;
-      color: #000000; 
-    }
+   
   }
 }
 

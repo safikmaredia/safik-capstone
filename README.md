@@ -12,7 +12,7 @@ Firebase (for authentication and potentially other features)
 
 Features:
 
-Browse a diverse selection of toys.
+Browse a diverse selection of baby products.
 Add baby products to the shopping cart.
 View and manage items in the cart.
 Secure user authentication using Firebase.
